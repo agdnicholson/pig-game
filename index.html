@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Pig Game</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+    </head>
+
+    <body>
+        <div id="message">
+            <div id="inner-message" class="alert alert-info text-center">
+                This is a test project made by Andrew Nicholson. Click <a href="https://www.andrewnicholson.co.uk" class="text-info">HERE</a> to go back to the main site: <a href="https://www.andrewnicholson.co.uk" class="text-info">andrewnicholson.co.uk</a>
+            </div>
+        </div>
+        <div class="wrapper clearfix">
+            <div class="game">
+                <div class="player-0-panel active">
+                    <div class="player-name" id="name-0">Player 1</div>
+                    <div class="player-score" id="score-0">43</div>
+                    <div class="player-current-box">
+                        <div class="player-current-label">Current</div>
+                        <div class="player-current-score" id="current-0">11</div>
+                    </div>
+                </div>
+                
+                <div class="player-1-panel">
+                    <div class="player-name" id="name-1">Player 2</div>
+                    <div class="player-score" id="score-1">72</div>
+                    <div class="player-current-box">
+                        <div class="player-current-label">Current</div>
+                        <div class="player-current-score" id="current-1">0</div>
+                    </div>
+                </div>
+                
+                <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+                <div class="goal-display">
+                    Goal: 100
+                </div>
+                <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+                <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+                
+                <div class="dice-box">
+                </div>
+                <img src="dice-5.png" alt="Dice" class="dice">
+
+                <img src="dice-1.png" alt="Dice 1" class="dice-0">
+
+                <img src="dice-2.png" alt="Dice 2" class="dice-1">
+                
+            </div>
+            <div class="instructions">
+                <h1 style="text-align: center;">Welcome to the Pig Game!</h1>
+                <h3 class="my-4">Game Rules:</h3>
+                <ul>
+                    <li>The game has 2 players, playing in rounds</li>
+                    <li>In each turn, a player rolls one or two dice as many times as he whishes. Each result get added to his ROUND score</li>
+                    <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</li>
+                    <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn</li>
+                    <li>The first player to reach the goal points on GLOBAL score wins the game</li>
+                    <li>The goal score and number of dice used can be configured before each game. See below.</li>
+                </ul>
+                <div class="form-inline">
+                    <div class="col-md-12 form-group">
+                         <label class="col-sm-3 col-form-label justify-content-end" for="name">Number of dice used</label>
+                        <select id="num-dice" class="col-sm-3 form-control">
+                            <option val="1">1 Dice</option>
+                            <option val="2">2 Dice</option>
+                        </select>
+                        <label for="goal" class="col-sm-3 col-form-label justify-content-end">Goal score</label>
+                        <select id="goal" class="col-sm-3 form-control">
+                            <option val="50">50</option>
+                            <option val="75">75</option>
+                            <option val="100" selected="selected">100</option>
+                            <option val="150">150</option>
+                            <option val="200">200</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-start my-5"><i class="ion-ios-game-controller-b-outline"></i>Start game</button>
+
+            </div>
+            
+        </div>
+        <footer class="py-5 flex-shrink-0 text-light">
+            <div class="container text-center">
+                <small>Copyright &copy;2020 <a href="https://www.andrewnicholson.co.uk" class="text-light">Andrew Nicholson</a></small>
+            </div>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
